@@ -9,8 +9,14 @@ router.get('/', (req, res, next) => {
 });
 
 router.post('/', (req, res, next) => {
+   const user = {
+    name: req.body.name,
+    age: req.body.age
+   };
+   
     res.status(201).json({
-   message: "Handling POST request of the /users"
+   message: "Handling POST request of the /users",
+   user: user
     });
    
 });
